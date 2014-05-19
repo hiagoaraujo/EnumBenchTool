@@ -1,0 +1,2 @@
+sudo apt-get install openssh-server python-argparse python-numpy python-mysqldb
+authentication keys

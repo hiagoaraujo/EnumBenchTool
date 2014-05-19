@@ -1,0 +1,51 @@
+# Setup configuration file
+
+# Session description
+save_dir		/home/
+session_name	test
+scenario_list	500
+
+update_enabled	no
+update_rate		1ups
+
+# clients
+clients					2:2:4, 10, 15:5:30 
+num_dnsperf_processes	5
+repetitions		1
+query_type		qry-autho-exist	qry-autho-non-exist	qry-non-autho-non-exist
+
+software			bind 
+processes			named
+processes_users		bind
+num_of_cpu			24
+
+# Address
+server_ip_qry	10.27.0.24
+server_ip_ctrl	10.27.0.24
+client_ip_ctrl	10.27.0.24
+
+# Records
+num_of_zones	10
+domain_name		e164.arpa
+num_of_naptr	1
+
+# time
+limit			3
+timeout			1
+
+create_q_files		yes
+
+# zone files options
+create_zones		yes
+restart_software	yes
+
+
+# MySQL config
+create_database		yes
+mysql_database		pdns
+mysql_user			pdns_admin
+mysql_user_pass		pass
+
+
+# users and passwords
+server_pass	1223344		
